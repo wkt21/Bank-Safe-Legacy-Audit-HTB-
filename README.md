@@ -91,30 +91,30 @@ CVE-2026-1337 — Insecure Update Handler in LegacyBackup
 
 ## Learning Objectives
 
-- Perform practical Linux enumeration
-- Read breadcrumbs from hidden user files
-- Recognize insecure shell scripting patterns
-- Understand how unsafe `eval` can be abused
-- Discover hidden files and directories
-- Trace multi-artifact clue chains
-- Inspect frontend assets for passive hints
-- Use `curl` to validate and interact with services
+- Perform practical Linux enumeration.
+- Read breadcrumbs from hidden user files.
+- Recognize insecure shell scripting patterns.
+- Understand how unsafe `eval` can be abused.
+- Discover hidden files and directories.
+- Trace multi-artifact clue chains.
+- Inspect frontend assets for passive hints.
+- Use `curl` to validate and interact with services.
 
 ## Rules / Requirements
 
-- No brute force required
-- No real malware
-- No persistence beyond challenge design
-- No outbound command-and-control behavior
-- Intended to work offline
-- All malicious behavior is simulated and safe
+- No brute force required.
+- No real malware.
+- No persistence beyond challenge design.
+- No outbound command-and-control behavior.
+- Intended to work offline.
+- All malicious behavior is simulated and safe.
 
 ## Repository Contents
 
-- `FILESYSTEM.md` — documented challenge filesystem layout
-- `ARTIFACTS.md` — important files, clues, flags, and services
-- `challenge/rootfs/` — source tree for challenge artifacts
-- `challenge/source_material/` — source text for binary artifacts
+- `FILESYSTEM.md` — documented challenge filesystem layout.
+- `ARTIFACTS.md` — important files, clues, flags, and services.
+- `challenge/rootfs/` — source tree for challenge artifacts.
+- `challenge/source_material/` — source text for binary artifacts.
 
 ## Notes for Builders
 
