@@ -1,0 +1,4 @@
+# <file system> <mount point> <type> <options> <dump> <pass>
+UUID=00000000-0000-0000-0000-000000000001 / ext4 defaults 0 1
+UUID=00000000-0000-0000-0000-000000000002 /home ext4 defaults 0 2
+tmpfs /tmp tmpfs defaults,nodev,nosuid 0 0
