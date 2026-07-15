@@ -67,12 +67,9 @@ Players must:
 - **Value:** `HTB{DE_AD_B3_3F}`
 - **Method:** Discover endpoint clues through artifacts and web hints, then run:
   ```bash
-  curl 192.57.164.15:42328
+  curl 192.57.164.15:423268
 
-
-
----
-*** Begin Patch
+  *** Begin Patch
 *** Update File: README.md
 @@
 -Services
