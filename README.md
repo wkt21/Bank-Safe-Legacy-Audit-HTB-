@@ -72,7 +72,52 @@ Players must:
 
 
 ---
+## Services
 
-# Services
+| Service | Port | Purpose |
+|---|---:|---|
+| Debug Server | 42328 | Returns final flag |
+| Web Interface | 80/443 | Hosts passive clue via fake cookie / JS comment |
 
-ServicePortPurposeDebug Server42328Returns final flagWeb InterfaceFictional CVECVE-2026-1337 — Insecure Update Handler in LegacyBackupType: Local file read / limited command injectionVector: Unsafe eval usage in backup.shImpact: Access to restricted local contentSeverity: MediumNote: Fully fictional and intentionally safe for challenge useLearning ObjectivesPerform practical Linux enumerationRead breadcrumbs from hidden user filesRecognize insecure shell scripting patternsUnderstand how unsafe eval can be abusedDiscover hidden files and directoriesTrace multi-artifact clue chainsInspect frontend assets for passive hintsUse curl to validate and interact with servicesNo brute force requiredNo real malwareNo persistence beyond challenge designNo outbound command-and-control behaviorIntended to work offlineAll malicious behavior is simulated and safeRepository ContentsFILESYSTEM.md — documented challenge filesystem layoutARTIFACTS.md — important files, clues, flags, and serviceschallenge/rootfs/ — source tree for challenge artifactschallenge/source_material/ — source text for binary artifactsNotes for BuildersThe repository includes source material for the PDF and JPG challenge artifacts. If you are packaging this into a live VM, you should replace the placeholder/source approach with actual generated binary files matching the intended contents.This challenge is designed to feel like a realistic audit environment while remaining entirely self-contained and safe. The path is primarily linear, but multiple breadcrumbs reinforce each step to reduce player frustration without requiring brute force.
+## Fictional CVE
+
+CVE-2026-1337 — Insecure Update Handler in LegacyBackup
+
+- Type: Local file read / limited command injection
+- Vector: Unsafe `eval` usage in `backup.sh`
+- Impact: Access to restricted local content
+- Severity: Medium
+- Note: Fully fictional and intentionally safe for challenge use
+
+## Learning Objectives
+
+- Perform practical Linux enumeration
+- Read breadcrumbs from hidden user files
+- Recognize insecure shell scripting patterns
+- Understand how unsafe `eval` can be abused
+- Discover hidden files and directories
+- Trace multi-artifact clue chains
+- Inspect frontend assets for passive hints
+- Use `curl` to validate and interact with services
+
+## Rules / Requirements
+
+- No brute force required
+- No real malware
+- No persistence beyond challenge design
+- No outbound command-and-control behavior
+- Intended to work offline
+- All malicious behavior is simulated and safe
+
+## Repository Contents
+
+- `FILESYSTEM.md` — documented challenge filesystem layout
+- `ARTIFACTS.md` — important files, clues, flags, and services
+- `challenge/rootfs/` — source tree for challenge artifacts
+- `challenge/source_material/` — source text for binary artifacts
+
+## Notes for Builders
+
+The repository includes source material for the PDF and JPG challenge artifacts. If you are packaging this into a live VM, replace the placeholder/source approach with actual generated binary files matching the intended contents.
+
+This challenge is designed to feel like a realistic audit environment while remaining entirely self-contained and safe. The path is primarily linear, but multiple breadcrumbs reinforce each step to reduce player frustration without requiring brute force.
