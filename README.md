@@ -68,13 +68,18 @@ Players must:
 - **Method:** Discover endpoint clues through artifacts and web hints, then run:
   ```bash
   curl 192.57.164.15:423268
+--- 
 
-  *** Begin Patch
-*** Update File: README.md
-@@
--Services
--
--ServicePortPurposeDebug Server42328Returns final flagWeb InterfaceFictional CVECVE-2026-1337 — Insecure Update Handler in LegacyBackupType: Local file read / limited command injectionVector: Unsafe eval usage in backup.shImpact: Access to restricted local contentSeverity: MediumNote: Fully fictional and intentionally safe for challenge useLearning ObjectivesPerform practical Linux enumerationRead breadcrumbs from hidden user filesRecognize insecure shell scripting patternsUnderstand how unsafe eval can be abusedDiscover hidden files and directoriesTrace multi-artifact clue chainsInspect frontend assets for passive hintsUse curl to validate and interact with servicesNo brute force requiredNo real malwareNo persistence beyond challenge designNo outbound command-and-control behaviorIntended to work offlineAll malicious behavior is simulated and safeRepository ContentsFILESYSTEM.md — documented challenge filesystem layoutARTIFACTS.md — important files, clues, flags, and serviceschallenge/rootfs/ — source tree for challenge artifactschallenge/source_material/ — source text for binary artifactsNotes for BuildersThe repository includes source material for the PDF and JPG challenge artifacts. If you are packaging this into a live VM, you should replace the placeholder/source approach with actual generated binary files matching the intended contents.This challenge is designed to feel like a realistic audit environment while remaining entirely self-contained and safe. The path is primarily linear, but multiple breadcrumbs reinforce each step to reduce player frustration without requiring brute force.
+# Services
+-ServicePortPurposeDebug Server42328Returns final flagWeb InterfaceFictional CVECVE-2026-1337 — Insecure Update Handler in
+
+# LegacyBackupType: Local file read / limited command injectionVector: Unsafe eval usage in backup.shImpact: Access to restricted local contentSeverity: MediumNote: Fully fictional and intentionally safe for challenge useLearning ObjectivesPerform practical Linux enumerationRead breadcrumbs from hidden user filesRecognize insecure shell scripting patternsUnderstand how unsafe eval can be abusedDiscover hidden files and directoriesTrace multi-artifact clue chainsInspect frontend assets for passive hintsUse curl to validate and interact with servicesNo brute force requiredNo real malwareNo persistence beyond challenge designNo outbound command-and-control behaviorIntended to work offlineAll malicious behavior is simulated and safeRepository 
+
+# ContentsFILESYSTEM.md —documented challenge filesystem layoutARTIFACTS.md — important files, clues, flags, and serviceschallenge/rootfs/ — source tree for challenge 
+
+# artifactschallenge/source_material/ — source text for binary artifactsNotes for BuildersThe repository includes source material for the PDF and JPG challenge artifacts. 
+
+# If you are packaging this into a live VM, you should replace the placeholder/source approach with actual generated binary files matching the intended contents.This challenge is designed to feel like a realistic audit environment while remaining entirely self-contained and safe. The path is primarily linear, but multiple breadcrumbs reinforce each step to reduce player frustration without requiring brute force.
 +## Services
 +
 +| Service | Port | Purpose |
