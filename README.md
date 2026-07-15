@@ -44,3 +44,27 @@ Players must:
 - Fictional local script vulnerability
 - Hidden directory discovery
 - Steganography clue chain
+- Frontend source inspection
+- Service and log analysis
+- Curl-based endpoint interaction
+
+---
+
+## Flags
+
+### Flag 1 — Recon
+- **Location:** `/home/bankadmin/flag1.txt`
+- **Value:** `HTB{initial_recon_master}`
+- **Method:** Read hidden notes and shell history during basic enumeration.
+
+### Flag 2 — Exploitation
+- **Location:** `/opt/legacy_backup/flag2.txt`
+- **Value:** `HTB{backup_script_abuse}`
+- **Method:** Abuse fictional `CVE-2026-1337` in `backup.sh`.
+
+### Flag 3 — Debug Endpoint
+- **Location:** response from the debug service on port `42328`
+- **Value:** `HTB{DE_AD_B3_3F}`
+- **Method:** Discover endpoint clues through artifacts and web hints, then run:
+  ```bash
+  curl 192.57.164.15:42328
