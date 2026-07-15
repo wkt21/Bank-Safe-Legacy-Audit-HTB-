@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="${1:-$(pwd)}"
+VM_NAME="BankSafe-Legacy-Audit-HTB"
+DISK_GB="40"
+MEMORY_MB="4096"
+CPUS="2"
+ISO_PATH="${ISO_PATH:-$HOME/Downloads/parrot-security.iso}"
+
+command -v VBoxManage >/dev/null 2>&1 || { echo "VBoxManage not found" >&2; exit 1; }
+[ -f "$ISO_PATH" ] || { echo "Parrot ISO not found: $ISO_PATH" >&2; exit 1; }
+
+VM_DIR="$ROOT_DIR/vm"
+mkdir -p "$VM_DIR"
+VDI="$VM_DIR/${VM_NAME}.vdi"
+
+VBoxManage createvm --name "$VM_NAME" --ostype Debian_64 --register
+VBoxManage modifyvm "$VM_NAME" --memory "$MEMORY_MB" --cpus "$CPUS" --vram 128 --graphicscontroller vmsvga --nic1 nat --audio none --usb on --clipboard bidirectional --draganddrop bidirectional --firmware efi
+VBoxManage createhd --filename "$VDI" --size $((DISK_GB * 1024))
+VBoxManage storagectl "$VM_NAME" --name "SATA Controller" --add sata --controller IntelAhci
+VBoxManage storageattach "$VM_NAME" --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium "$VDI"
+VBoxManage storagectl "$VM_NAME" --name "IDE Controller" --add ide
+VBoxManage storageattach "$VM_NAME" --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium "$ISO_PATH"
+
+cat <<EOF
+VM created: $VM_NAME
+Next: start the VM and install Parrot OS from the attached ISO.
+After install, copy challenge/rootfs into the VM filesystem.
+EOF
